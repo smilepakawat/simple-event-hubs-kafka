@@ -1,5 +1,4 @@
-package com.smile.example.simpleeventhubs.configuration;//Copyright (c) Microsoft Corporation. All rights reserved.
-//Licensed under the MIT License.
+package com.smile.example.simpleeventhubs.configuration;
 
 import org.apache.kafka.common.security.oauthbearer.OAuthBearerToken;
 
