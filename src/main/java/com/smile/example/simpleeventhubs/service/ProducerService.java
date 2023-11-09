@@ -12,11 +12,11 @@ import java.util.concurrent.Executor;
 
 @Slf4j
 @Service
-public class Producer {
+public class ProducerService {
     private final KafkaTemplate<String, String> kafkaTemplate;
     private final Executor executor;
 
-    public Producer(KafkaTemplate<String, String> kafkaTemplate, @Qualifier("applicationTaskExecutor") Executor executor) {
+    public ProducerService(KafkaTemplate<String, String> kafkaTemplate, @Qualifier("applicationTaskExecutor") Executor executor) {
         this.kafkaTemplate = kafkaTemplate;
         this.executor = executor;
     }
