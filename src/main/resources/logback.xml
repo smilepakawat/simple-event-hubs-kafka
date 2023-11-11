@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="LOGS" value="./logs" />
+    <property resource="application.properties" />
+    <appender name="CONSOLE_APPENDER" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%d{yyyy-MM-dd}T%d{HH:mm:ss}+07:00 ${spring.application.name} %replace(%t){'\s', ''} %level %logger{36} [%X{correlationId}] - %m%n</pattern>
+        </encoder>
+    </appender>
+    
+    <root level="info">
+        <appender-ref ref="CONSOLE_APPENDER"/>
+    </root>
+</configuration>

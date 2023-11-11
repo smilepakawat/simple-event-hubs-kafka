@@ -20,4 +20,10 @@ public class PublishController {
         producerService.publishMessage("simple-topic", obj.writeValueAsString(request));
         return ResponseEntity.ok().body("success");
     }
+
+    @PostMapping(value = "/publish-correlation")
+    public ResponseEntity<Object> publishMessageWithCorrelation(@RequestBody Object request) throws JsonProcessingException {
+        producerService.publishMessageWithCorrelation("simple-topic", obj.writeValueAsString(request));
+        return ResponseEntity.ok().body("success");
+    }
 }

@@ -9,6 +9,5 @@ import org.springframework.stereotype.Service;
 public class ConsumerService {
     @KafkaListener(topics = "${spring.kafka.topic.name}", groupId = "${spring.kafka.group-id}")
     public void consumeMessage(String msg) {
-        log.info("this is log from event hub: {}", msg);
     }
 }
