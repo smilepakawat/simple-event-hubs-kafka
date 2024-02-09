@@ -41,5 +41,4 @@ public class MyConsumerInterceptor implements ConsumerInterceptor<String, String
     @Override
     public void close() {
     }
-
 }
